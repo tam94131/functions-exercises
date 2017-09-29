@@ -52,3 +52,16 @@ function haveWdi(arrcoll) {
 	return success;
 }
 
+function longestWord(sentence) {
+	var words = [];
+	var longest = 0, longestIndex; 
+
+	words = sentence.split(" ");
+	for (j=0; j<words.length; j++) {
+		if (words[j].length>longest) {
+			longest = words[j].length;
+			longestIndex = j; 
+		}
+	}
+	return words[longestIndex];
+}
